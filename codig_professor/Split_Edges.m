@@ -1,8 +1,3 @@
-load manh.el
-el = manh;
-load manh.xy
-xy = manh;
-
 function [nc nvc vc] = Split_Edges(nv,A)
     nc   = 0;
     [k]  = FindNextComp(nv,A);
@@ -29,7 +24,7 @@ function [nc nvc vc] = Split_Edges(nv,A)
         [k]  = FindNextComp(nv,A);
     end
     return
-endfunction
+end
 
 
 function [k] = FindNextComp(n, A)
@@ -43,7 +38,7 @@ function [k] = FindNextComp(n, A)
     end
     k = 0;
     return
-endfunction
+end
 
 
 function [value] = InComp(n, y, x)
@@ -55,23 +50,4 @@ function [value] = InComp(n, y, x)
         end
     end
     return
-endfunction
-
-function [value] = Cuu(cu)
-    value = 0;
-    for i = 1:cu
-        i
-    end
-    return
-endfunction
-
-matriz_adjacencia = zeros(size(xy,1),size(xy,1));
-
-for i = 1:size(el,1)
-    matriz_adjacencia(el(i,1)+1,el(i,2)+1) = 1;
-    matriz_adjacencia(el(i,2)+1,el(i,1)+1) = 1;
 end
-
-nv = 8837
-
-Cuu(5)
